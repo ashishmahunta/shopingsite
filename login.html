@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"  initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://kit.fontawesome.com/259d6bd78e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar" id="navbar_1">
+        <div class="logo_brand"> 
+        <img src="assets/SHOPERSSHOP.svg" alt="Logo" id="logo" />
+        <h6>that's what she said</h6>
+      </div>
+   
+            <ul class="right_section">
+                    <li id="scroll_cat"><a>Category</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Username</li>
+            </ul>
+    <div id="mobile_left_section">
+        <button>downarrow</button>
+        <div id="mobile_drop_down">
+            
+        </div>
+    </div>
+</div>
+    <div class="main_container">
+        <div class="sign_overlay">
+            <div class="over_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio qui dolores eligendi! Rerum quas quam quae quidem harum ad ipsum.</div>
+                <button id="sign_up" class="button-23">sign up</button>
+                <img src="assets/modelLogin.jpg" class="over_img"/>
+        </div>
+        <div class="log_overlay inactive">
+            <div class="over_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio qui dolores eligendi! Rerum quas quam quae quidem harum ad ipsum.</div>
+
+            <button id="log_in" class="button-23">log in</button>
+            <img src="assets/modelWalk1.jpg" class="over_img"/>
+
+        </div>
+
+        <div class="login_container">
+
+            <div class="sign_container_wrapper">
+                <input class="sign_container_input" type="text" placeholder="enter your email"/>
+                <input class="sign_container_input" type="text" placeholder="enter your password"/> 
+               
+                <button class="button-26">sign in</button>
+            </div>
+            <button id="socials-1" class="button-81">
+                <i class="fa-brands fa-google"></i> login using google
+            </button>
+
+
+        </div>
+        <div class="sign_container backin inactive">
+
+                <div class="sign_container_wrapper">
+                    <input class="sign_container_input" type="text" placeholder="enter your email"/>
+                    <input class="sign_container_input" type="text" placeholder="enter your password"/> 
+                    <input class="sign_container_input" type="text" placeholder="enter your confirm password"/> 
+                    <button class="button-26">sign up</button>
+                </div>
+                <button id="socials-2" class="button-81">
+                    <i class="fa-brands fa-google"></i> sign up using google
+                </button>
+
+
+
+        </div>
+
+    </div>
+
+<script>
+
+        const logOverLay=document.getElementsByClassName("log_overlay");
+        const signOverLay=document.getElementsByClassName("sign_overlay");
+
+        const login_container=document.getElementsByClassName("login_container");
+        const sign_container=document.getElementsByClassName("sign_container");
+
+        const  logIn_button=document.getElementById("log_in")
+        const  signup_button=document.getElementById("sign_up")
+
+        logIn_button.addEventListener("click",function () {
+            
+            login_container[0].classList.remove("inactive");
+          login_container[0].classList.add("sign_travel");
+           sign_container[0].classList.add("inactive");
+           logOverLay[0].classList.add("inactive");
+           signOverLay[0].classList.remove("inactive");
+
+
+
+        })
+        signup_button.addEventListener("click",function () {
+            
+           login_container[0].classList.add("inactive");
+           sign_container[0].classList.remove("inactive");
+           sign_container[0].classList.replace("backin","backout");
+           sign_container[0].classList.add("sign_travel");
+           logOverLay[0].classList.remove("inactive");
+           signOverLay[0].classList.add("inactive");
+
+    })
+
+
+</script>
+
+
+
+</body>
+</html>
